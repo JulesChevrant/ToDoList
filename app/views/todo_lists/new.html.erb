@@ -1,0 +1,7 @@
+<%= simple_form_for(@todo_list) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to lists", root_path %>
