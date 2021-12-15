@@ -1,5 +1,9 @@
-<h1><%= @todo_list.title %></h1>
+<h1><strong><%= @todo_list.title %></strong></h1>
 <p><%= @todo_list.description %></p>
 
+<%= link_to "Delete",
+            todo_list_path(@todo_list),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
 
 <%= link_to "Back to lists", root_path %>

@@ -28,10 +28,11 @@ class TodoListsController < ApplicationController
     # redirect_to *model*_path(@*model*), notice: '*ModelClassName* was successfully updated.'
     # end
 
-    # def destroy
-    # @*model*.destroy
-    # redirect_to *model*s_path, notice: '*ModelClassName* was successfully destroyed.'
-    # end
+    def destroy
+      @todo_list = TodoList.find(params[:id])
+      @todo_list.destroy
+      redirect_to root_path
+    end
 
     private
 
